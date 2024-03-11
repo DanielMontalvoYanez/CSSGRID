@@ -1,1 +1,6 @@
-this is a comment
+nano /etc/apache2/ports.conf : habilitar puertos
+
+a2dissite * : desabilita las paginas
+a2ensite page.conf : habilita pagina
+
+systemctl reload apache 2 : reinicia los servicios
