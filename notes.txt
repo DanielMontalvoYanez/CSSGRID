@@ -4,3 +4,19 @@ a2dissite * : desabilita las paginas
 a2ensite page.conf : habilita pagina
 
 systemctl reload apache 2 : reinicia los servicios
+
+------------------------
+# settings....
+display: grid;
+
+#ajusta todo el contenido
+justify-content: space-between;
+align-content: center;
+
+#ajusta el contenido por filas o columnas
+justify-items: start...
+align-items:
+#ajustar el contenido por cada elemento
+justify-self: end
+align-self: center
+--------------------------

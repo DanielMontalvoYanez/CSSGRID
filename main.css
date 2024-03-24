@@ -1,55 +1,35 @@
 body{
-margin:0 auto;
+margin: 0 auto;
 }
+
 .container{
-display:grid;
-background: #0D0D0D;
-padding: 10em;
-
-/*COLUMNAS CONFIG....*/
-/*grid-template-columns: 50% 50%; /*define numero de columnas > lv1 */
-/*grid-template-columns: 1fr 1fr; /* define numero de columnas y se distribuye en  toda el espacio de la pantalla > lv2*/
-grid-template-columns: repeat(3, 1fr);/*recive el  numero de columnas y se distribuye en toda la pantalla > lv3*/
-
-/*FILAS CONFIG....*/
-/*grid-template-rows: auto 250px  ; /*define tamano de cada una de las filas*/
-grid-template-rows: minmax(50px, auto);/*define el minimo de espacio de cada fila y se distribuye en toda la pantalla*/
-gap:1em;/* agregar espacio entre todas las columnas y filas*/
-/*column-gap:1em; /*agregar espacio entre columnas*/
-/*row-gap:3em; /*agregar espacio entre filas*/
-
-/*espaciado horizontal : center,end, stretch viene por default
-justify-items: start;*/
-
-/*espaciado vertical : center,end, stretch viene por default
-align-items: end;*/
-
-
+ display: grid;
+ background:#3c3c3c;
+ grid-auto-rows: 80px;
+ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+ height: 500px;
+ gap: 1rem;
+ grid-template-areas:
+  "header header header"
+  "aside main main"
+  "footer footer footer"	
 }
 
-.div1{
-/* 
-- alinacion vertical por cada div 
- align-self:center 
 
- -alinacion horizontal por cada div
- justify-self:start
- */
- grid-column:1/4;/*abaca las lineas imaginarias dependiendo del numero de columnas*/
- /*grid-row:1/6; abarca las lineas imaginarias verticales dependiendo del numero de filas*/
-
+.container header{
+ background: #b5b5b5;
+ grid-area: header;
+ 
 }
-
-.div5{
-grid-row:2/4;
-grid-column:1/3;
+.container aside{
+ background: #b5b5b5;
+ grid-area: aside;
 }
-
-.container > div{
-background: #F2F2F2;
-padding: 5em;
+.container main{
+ background: #b5b5b5;
+ grid-area: main;
 }
-
-.container > div:hover{
-border:10px solid #59514F;
+.container footer{
+ background: #b5b5b5;
+ grid-area: footer;
 }
